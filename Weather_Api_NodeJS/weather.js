@@ -22,7 +22,7 @@ app.post("/",function(req,res)
   const apiKey=process.env.API_KEY;
   console.log(apiKey);
   const unit = "metric";
-  const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+apiKey;
+  const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+apiKey+"&units=metric";
 //Fetching data from api(open weather map)
 console.log(url);
   https.get(url,function(response)
@@ -33,7 +33,11 @@ console.log(url);
 
         console.log(weather);
         const temp = weather.main.temp;
-        res.write("<h1>Temprature in "+query+" is "+temp);
+        const country = weather.sys.country;
+        const desc = weather.weather[0].description;
+        res.write("<h1>Temprature in "+query+" -> "+temp +" Celcius");
+        res.write("<h1>Country :-"+country+"</h1>");
+        res.write("<h1>Condition :-"+desc);
         // res.send();
     })
   })

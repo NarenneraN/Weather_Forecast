@@ -16,9 +16,22 @@ h1{
   letter-spacing: 2px;
   font-weight: 900;
 }
+.form_cont
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form{
-  margin-left: 50px;
-  margin-top: 50px;
+  /* margin-left: 50px;
+  margin-top: 50px; */
+  text-align: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  display: inline-block;
+  margin:30px auto;
 }
 form input,label{
   font-size: 20px;
