@@ -33,13 +33,62 @@ console.log(url);
         const weather = JSON.parse(data);
 
         console.log(weather);
-        const temp = weather.main.temp;
-        const country = weather.sys.country;
-        const desc = weather.weather[0].description;
-        res.write("<h1>Temprature in "+query+" -> "+temp +" Celcius");
-        res.write("<h1>Country :-"+country+"</h1>");
-        res.write("<h1>Condition :-"+desc);
-        // res.send();
+        const icon = weather.weather[0].icon;
+         const iconPath = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+        var forecast = {
+          temp:weather.main.temp,
+          country:weather.sys.country,
+          desc:weather.weather[0].description,
+          img_path:iconPath
+        }
+        // res.write("<h1>Temprature in "+query+" -> "+forecast.temp +" Celcius");
+        // res.write("<h1>Country :-"+forecast.country+"</h1>");
+        // res.write("<h1>Condition :-"+forecast.desc);
+        // res.sendFile(__dirname+"/result.html");
+        res.write(`
+          <!DOCTYPE html>
+          <html lang="en" dir="ltr">
+            <head>
+              <meta charset="utf-8">
+              <title></title>
+              <link rel="stylesheet" href="/CSS/index.css">
+            </head>
+            <body>
+              <div class="page_cont">
+                <div class="header_weather">
+                    <p>Weather Forecast Report</p>
+                </div>
+                <div class="city_header">
+                    <p>${query}</p>
+                </div>
+                <div class="main_weather">
+
+
+                  <div class="image_degree">
+                     <img src="${forecast.img_path}" alt="">
+                     <p>${forecast.temp}</p>
+                  </div>
+                  <p>${forecast.desc}</p>
+                  <div class="bottom">
+                    <div class="hum_bot">
+                        <p>HUMIDITY</p>
+                        <p></p>
+                    </div>
+                    <div class="wns_bot">
+                        <p>WIND SPEED</p>
+                        <p></p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </body>
+          </html>
+
+
+        `)
     })
   })
     // res.send("<h1>First Run -> Naren<h1>");

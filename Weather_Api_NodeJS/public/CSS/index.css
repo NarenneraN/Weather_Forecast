@@ -1,12 +1,12 @@
 
-body
+.welcome
 {
   padding: 0;
   margin:0;
   color:#181818;
   background-color: rgb(58,175,169);
 }
-h1{
+.welcome h1{
   color:black;
   text-shadow: 2px 0 black;
   font-size: 30px;
@@ -62,4 +62,39 @@ button{
 }
 button:hover{
   color:white;
+}
+/* <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet"> */
+.result{
+  background-color:#181818;
+}
+.page_cont
+{
+  position: absolute;
+ top: 50%; right: 50%;
+ transform: translate(50%,-50%);
+ background-color: white;
+ border-radius: 20px;
+ /* padding: 30px; */
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ min-width: 500px;
+}
+.header_weather{
+  background-color: #f3ca20;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+.city_header{
+  font-size: 30px;
+  font-family: 'Raleway', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-weight:900;
+    letter-spacing: 3px;
 }
