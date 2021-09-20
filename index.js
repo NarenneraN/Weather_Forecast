@@ -102,7 +102,7 @@ console.log(url);
   })
     // res.send("<h1>First Run -> Naren<h1>");
 })
-app.listen(3000,function()
+app.listen(process.env.PORT||3000,function()
 {
   console.log("Server Started! On Port 3000");
 })
