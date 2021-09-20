@@ -20,7 +20,7 @@ app.post("/",function(req,res)
   // console.log(req.body.city);
   var query="Ariyalur";
   query=req.body.city;
-  const apiKey=process.env.API_KEY;
+  const apiKey="81aacc9a5353d0eba66d35e9b7cc19f1";
   console.log(apiKey);
   const unit = "metric";
   const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&appid="+apiKey+"&units=metric";
