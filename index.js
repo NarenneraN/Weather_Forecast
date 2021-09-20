@@ -31,8 +31,8 @@ console.log(url);
     //Parsing JSSON format object data
     response.on("data",function(data){
         const weather = JSON.parse(data);
-
-        console.log(weather);
+if(weather.cod==200){
+    console.log(weather);
         const icon = weather.weather[0].icon;
          const iconPath = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
         var forecast = {
@@ -98,6 +98,11 @@ console.log(url);
 
 
         `)
+}
+      else{
+        res.write("<h1>Sorry! Weather Forecast not available at entered city😣Naren's Vanilai Mayam will try to add on service if that's available in later days</h1>");
+      }
+      
     })
   })
     // res.send("<h1>First Run -> Naren<h1>");
