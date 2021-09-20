@@ -39,7 +39,9 @@ console.log(url);
           temp:weather.main.temp,
           country:weather.sys.country,
           desc:weather.weather[0].description,
-          img_path:iconPath
+          img_path:iconPath,
+          humidity:weather.main.humidity,
+          wind:weather.wind.speed
         }
         // res.write("<h1>Temprature in "+query+" -> "+forecast.temp +" Celcius");
         // res.write("<h1>Country :-"+forecast.country+"</h1>");
@@ -53,36 +55,43 @@ console.log(url);
               <title></title>
               <link rel="stylesheet" href="/CSS/index.css">
             </head>
-            <body>
-              <div class="page_cont">
-                <div class="header_weather">
-                    <p>Weather Forecast Report</p>
-                </div>
-                <div class="city_header">
-                    <p>${query}</p>
-                </div>
-                <div class="main_weather">
-
-
-                  <div class="image_degree">
-                     <img src="${forecast.img_path}" alt="">
-                     <p>${forecast.temp}</p>
+            <body class="result">
+              <div class="full">
+                <div class="page_cont">
+                  <div class="header_weather">
+                      <p>Weather Forecast Report</p>
                   </div>
-                  <p>${forecast.desc}</p>
-                  <div class="bottom">
-                    <div class="hum_bot">
-                        <p>HUMIDITY</p>
-                        <p></p>
-                    </div>
-                    <div class="wns_bot">
-                        <p>WIND SPEED</p>
-                        <p></p>
-                    </div>
+                  <div class="city_header">
+                      <p>${query}</p>
                   </div>
+                  <div class="main_weather">
 
+
+                    <div class="image_degree">
+                       <img class="wea_img" src="${forecast.img_path}" alt="">
+                       <p>${forecast.temp}<sup>°C</sup></p>
+                    </div>
+                    <div class="wea_desc">
+                    <p>${forecast.desc}</p>
+                    </div>
+
+                    <div class="bottom">
+                      <div class="hum_bot">
+                          <p>HUMIDITY</p>
+                          <p>${forecast.humidity}%</p>
+                      </div>
+                      <div class="wns_bot">
+                          <p>WIND SPEED</p>
+                          <p>${forecast.wind} m/s</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <p class="credit">😎 Devloped by Naren 😎</p>
+                  <p class="credit-2">Using OpenWeatherMap API</p>
                 </div>
-
               </div>
+
 
             </body>
           </html>
