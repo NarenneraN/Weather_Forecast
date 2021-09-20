@@ -1,0 +1,15 @@
+{
+  "name": "weather_api_nodejs",
+  "version": "1.0.0",
+  "description": "First tie using api (weather)",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naren",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
