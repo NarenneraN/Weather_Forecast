@@ -7,4 +7,5 @@ Enter Any City fetch Forecast :-
 ![image](https://user-images.githubusercontent.com/84332200/133893979-1e0c8f5c-cc59-4489-b867-dcfe1e3e2af4.png)
 
 After Request -> result :- 
-![image](https://user-images.githubusercontent.com/84332200/133894440-fa8ae1bd-b848-45a9-a7a2-46130cbacb4d.png)
+![image](https://user-images.githubusercontent.com/84332200/133966604-9b21f757-4d34-481e-860e-9f5144551727.png)
+
