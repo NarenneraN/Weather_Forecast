@@ -107,12 +107,12 @@ if(weather.cod==200){
     <meta charset="utf-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/CSS/index.css">
+   <link rel="stylesheet" href="/CSS/index.css">
   </head>
   <body>
 <div class="full_error_page">
 <div class="error_content_div">
-    <img src="public/IMAGES/error_weather.gif" alt="">
+    <img src="/IMAGES/error_weather.gif" alt="">
 <div class="error_msg_div">
   <p class="lost_msg">😭 LOST IN CLOUDS 😭</p>
   <p class="sorry_msg">Sorry! The page you looked for isn't available</p>
