@@ -162,3 +162,61 @@ font-weight:300;
     text-align: center;
     margin: 10px auto;
 }
+.full_error_page{
+  background-color: #181818;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error_content_div{
+  background-color: white;
+  color:#181818;
+  width:50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+padding: 60px 20px;
+}
+.error_content_div img{
+  width:50%;
+  margin-bottom: 30px;
+}
+.error_msg_div{
+  font-family: 'Raleway', sans-serif;
+letter-spacing: 3px;
+text-align: center;
+}
+.lost_msg{
+  font-size: 3vw;
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+.sorry_msg{
+  font-size: 1.5vw;
+  color:#f7444e;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.dev_error{
+  font-size: 1.5vw;
+font-weight: 400;
+}
+@media screen and (max-width: 800px){
+ .error_content_div{
+   width:80%;
+ }
+ .lost_msg{
+   font-size: 5vw;
+ }
+ .sorry_msg{
+   font-size: 3vw;
+ }
+ .dev_error{
+   font-size: 3vw;
+ }
+}
