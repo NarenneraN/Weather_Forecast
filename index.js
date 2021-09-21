@@ -100,7 +100,33 @@ if(weather.cod==200){
         `)
 }
       else{
-        res.write("<h1>Sorry! Weather Forecast not available at entered city😣Naren's Vanilai Mayam will try to add on service if that's available in later days</h1>");
+        res.write(`
+        <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/CSS/index.css">
+  </head>
+  <body>
+<div class="full_error_page">
+<div class="error_content_div">
+    <img src="public/IMAGES/error_weather.gif" alt="">
+<div class="error_msg_div">
+  <p class="lost_msg">😭 LOST IN CLOUDS 😭</p>
+  <p class="sorry_msg">Sorry! The page you looked for isn't available</p>
+  <p class="dev_error">😎 Devloped By Naren 😎</p>
+</div>
+
+</div>
+</div>
+
+
+  </body>
+</html>
+
+        `);
       }
       
     })
